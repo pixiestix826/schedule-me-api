@@ -5,7 +5,11 @@ var Schema = mongoose.Schema;
 var UserSchema = new Schema({
   email: {type: String, required: true, unique: true},
   password: {type: String, required: true},
-  books: [{type: Schema.Types.ObjectId, ref: 'Book'}],
+  roles: [{type: String}],
+
+  firstName: [{type: String}],
+  lastName: [{type: String}],
+  Address: [{type: String}],
 });
 
 UserSchema.path('password').set(function(value) {

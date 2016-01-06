@@ -1,0 +1,5 @@
+{
+  "name": "schedule-me-api",
+  "description": "A Restful API for menu items, order items, and orders.",
+  "addons": ["mongolab"]
+}
