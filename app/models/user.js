@@ -7,9 +7,10 @@ var UserSchema = new Schema({
   password: {type: String, required: true},
   roles: [{type: String}],
 
-  firstName: [{type: String}],
-  lastName: [{type: String}],
-  Address: [{type: String}],
+  firstName: {type: String},
+  lastName: {type: String},
+  address: {type: String},
+  payment: {type: String},
 });
 
 UserSchema.path('password').set(function(value) {
