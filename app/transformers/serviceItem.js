@@ -10,6 +10,7 @@ var ServiceItemTransformer = Mystique.Transformer.extend({
       description: serviceItem.description,
       price: serviceItem.price,
       time: serviceItem.time,
+      appointments: serviceItem.appointments,
     };
   },
 
@@ -20,6 +21,7 @@ var ServiceItemTransformer = Mystique.Transformer.extend({
       description: req.getJson('serviceItem.description'),
       price: req.getJson('serviceItem.price'),
       time: req.getJson('serviceItem.time'),
+      appointments: req.getJson('serviceItem.appointments'),
     };
   },
 });

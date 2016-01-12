@@ -1,25 +1,25 @@
 var Mystique = require('mystique');
 
 var ClientInfoTransformer = Mystique.Transformer.extend({
-  resourceName: 'ClientInfo',
-  mapOut: function(ClientInfo) {
+  resourceName: 'clientInfo',
+  mapOut: function(clientInfo) {
     return {
-      id: ClientInfo.id,
-      firstName: ClientInfo.firstName,
-      lastName: ClientInfo.lastName,
-      email: ClientInfo.email,
-      address: ClientInfo.address,
-      payment: ClientInfo.payment,
+      id: clientInfo.id,
+      firstName: clientInfo.firstName,
+      lastName: clientInfo.lastName,
+      email: clientInfo.email,
+      address: clientInfo.address,
+      payment: clientInfo.payment,
     };
   },
 
   mapIn(req) {
     return {
-      firstName: req.getJson('ClientInfo.firstName'),
-      lastName: req.getJson('ClientInfo.lastName'),
-      email: req.getJson('ClientInfo.email'),
-      address: req.getJson('ClientInfo.address'),
-      payment: req.getJson('ClientInfo.payment'),
+      firstName: req.getJson('clientInfo.firstName'),
+      lastName: req.getJson('clientInfo.lastName'),
+      email: req.getJson('clientInfo.email'),
+      address: req.getJson('clientInfo.address'),
+      payment: req.getJson('clientInfo.payment'),
     };
   },
 });

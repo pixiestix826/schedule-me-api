@@ -1,21 +1,21 @@
 var Mystique = require('mystique');
 
 var ClientHistoryTransformer = Mystique.Transformer.extend({
-  resourceName: 'ClientHistory',
-  mapOut: function(ClientHistory) {
+  resourceName: 'clientHistory',
+  mapOut: function(clientHistory) {
     return {
-      id: ClientHistory.id,
-      date: ClientHistory.date,
-      service: ClientHistory.service,
-      price: ClientHistory.price,
+      id: clientHistory.id,
+      date: clientHistory.date,
+      service: clientHistory.service,
+      price: clientHistory.price,
     };
   },
 
   mapIn(req) {
     return {
-      date: req.getJson('ClientHistory.date'),
-      service: req.getJson('ClientHistory.service'),
-      price: req.getJson('ClientHistory.price'),
+      date: req.getJson('clientHistory.date'),
+      service: req.getJson('clientHistory.service'),
+      price: req.getJson('clientHistory.price'),
     };
   },
 });

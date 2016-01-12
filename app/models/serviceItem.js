@@ -11,10 +11,9 @@ var fields = {
   description: { type: String },
   price: { type: Number },
   time: { type: Number },
+  appointments: [{ type: ObjectId, ref: 'AppointmentItem' }],
 };
 
 var ServiceItemSchema = new Schema(fields);
-
-
 
 module.exports = mongoose.model('ServiceItem', ServiceItemSchema);
