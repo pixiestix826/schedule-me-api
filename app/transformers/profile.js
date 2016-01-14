@@ -12,6 +12,7 @@ var ProfileTransformer = Mystique.Transformer.extend({
       lastName: profile.lastName,
       clientHistory: profile.clientHistory,
       calendarAppointments: profile.calendarAppointments,
+      clientAppointments: profile.clientAppointments,
     };
   },
 
