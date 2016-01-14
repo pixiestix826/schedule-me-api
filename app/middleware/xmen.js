@@ -93,6 +93,10 @@ module.exports = function(req, res, next) {
             return res.status(500).send(err);
           }
 
+          if (!model) {
+            return res.status(404).send({message: `${modelName} with the id: ${id} not found`});
+          }
+
           req.store.renderItem(model, modelName, options);
         });
     },
