@@ -15,6 +15,11 @@ var ProfileTransformer = Mystique.Transformer.extend({
 
   mapIn(req) {
     return {
+      email: req.getJson('profile.email'),
+      address: req.getJson('profile.address'),
+      roles: req.getJson('profile.roles'),
+      firstName: req.getJson('profile.firstName'),
+      lastName: req.getJson('profile.lastName'),
     };
   },
 });

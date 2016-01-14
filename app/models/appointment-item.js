@@ -6,7 +6,7 @@ var ObjectId = Schema.ObjectId;
 var relationship = require('mongoose-relationship');
 
 var fields = {
-  service: { type: ObjectId, ref: 'Service', childPath: 'appointments' },
+  service: { type: ObjectId, ref: 'ServiceItem', childPath: 'appointments' },
   name: { type: String },
   startTime: { type: Date, default: Date.now },
   length: { type: Number },
