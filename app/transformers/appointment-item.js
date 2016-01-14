@@ -10,6 +10,7 @@ var AppointmentItemTransformer = Mystique.Transformer.extend({
       startTime: appointmentItem.startTime,
       length: appointmentItem.length,
       title: appointmentItem.title,
+      client: appointmentItem.client,
     };
   },
 
