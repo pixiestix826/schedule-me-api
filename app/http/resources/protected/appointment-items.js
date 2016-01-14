@@ -15,7 +15,12 @@ api.appointmentItem = function(req) {
 
 // POST
 api.addAppointmentItem = function(req) {
-  return req.store.createRecord('AppointmentItem');
+  return req.store.createRecord('AppointmentItem', {
+    beforeSave(model, save) {
+      model.client = req.user;
+      save();
+    },
+  });
 };
 
 // PUT

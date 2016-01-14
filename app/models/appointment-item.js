@@ -11,10 +11,12 @@ var fields = {
   startTime: { type: Date, default: Date.now },
   length: { type: Number },
   title: { type: String },
+  client: { type: ObjectId, ref: 'User', childPath: 'clientAppointments' },
 };
 
 var AppointmentItemSchema = new Schema(fields);
 
 AppointmentItemSchema.plugin(relationship, {relationshipPathName: 'service'});
+AppointmentItemSchema.plugin(relationship, {relationshipPathName: 'client'});
 
 module.exports = mongoose.model('AppointmentItem', AppointmentItemSchema);

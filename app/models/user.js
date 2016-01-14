@@ -11,6 +11,8 @@ var UserSchema = new Schema({
   lastName: {type: String},
   address: {type: String},
   payment: {type: String},
+  clientAppointments: [{ type: ObjectId, ref: 'AppointmentItem' }],
+  calendarAppointments: [{ type: ObjectId, ref: 'AppointmentItem' }],
 });
 
 UserSchema.path('password').set(function(value) {
