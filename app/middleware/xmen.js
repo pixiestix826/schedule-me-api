@@ -142,9 +142,9 @@ module.exports = function(req, res, next) {
           if (err) {
             return res.status(500).send(err);
           }
-          
+
           model.remove(() => {
-             res.status(204).send(); 
+             res.status(204).send();
           });
         });
     },
