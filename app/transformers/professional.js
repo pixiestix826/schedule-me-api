@@ -11,6 +11,7 @@ var ProfessionalTransformer = Mystique.Transformer.extend({
       specialty: professional.specialty,
       phone: professional.phone,
       calendarAppointments: professional.calendarAppointments,
+      isProfessional: professional.roles.indexOf('admin') > -1,
     };
   },
 
