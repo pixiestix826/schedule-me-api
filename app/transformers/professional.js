@@ -18,7 +18,6 @@ var ProfessionalTransformer = Mystique.Transformer.extend({
   mapIn(req) {
     return {
       email: req.getJson('professional.email'),
-      address: req.getJson('professional.address'),
       roles: req.getJson('professional.roles'),
       firstName: req.getJson('professional.firstName'),
       lastName: req.getJson('professional.lastName'),

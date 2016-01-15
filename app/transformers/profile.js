@@ -6,7 +6,6 @@ var ProfileTransformer = Mystique.Transformer.extend({
     return {
       id: profile.id,
       email: profile.email,
-      address: profile.address,
       roles: profile.roles,
       firstName: profile.firstName,
       lastName: profile.lastName,
@@ -21,7 +20,6 @@ var ProfileTransformer = Mystique.Transformer.extend({
   mapIn(req) {
     return {
       email: req.getJson('profile.email'),
-      address: req.getJson('profile.address'),
       specialty: req.getJson('profile.specialty'),
       phone: req.getJson('profile.phone'),
       roles: req.getJson('profile.roles'),

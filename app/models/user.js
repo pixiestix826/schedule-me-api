@@ -7,10 +7,8 @@ var UserSchema = new Schema({
   email: {type: String, required: true, unique: true},
   password: {type: String, required: true},
   roles: [{type: String}],
-
   firstName: {type: String},
   lastName: {type: String},
-  address: {type: String},
   phone: {type: String},
   specialty: {type: String},
   clientAppointments: [{ type: ObjectId, ref: 'AppointmentItem' }],
