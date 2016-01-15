@@ -11,7 +11,8 @@ var UserSchema = new Schema({
   firstName: {type: String},
   lastName: {type: String},
   address: {type: String},
-  payment: {type: String},
+  phone: {type: String},
+  specialty: {type: String},
   clientAppointments: [{ type: ObjectId, ref: 'AppointmentItem' }],
   calendarAppointments: [{ type: ObjectId, ref: 'AppointmentItem' }],
 });

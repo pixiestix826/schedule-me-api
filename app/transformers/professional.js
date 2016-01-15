@@ -8,6 +8,8 @@ var ProfessionalTransformer = Mystique.Transformer.extend({
       email: professional.email,
       firstName: professional.firstName,
       lastName: professional.lastName,
+      specialty: professional.specialty,
+      phone: professional.phone,
       calendarAppointments: professional.calendarAppointments,
     };
   },

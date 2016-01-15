@@ -10,6 +10,8 @@ var ProfileTransformer = Mystique.Transformer.extend({
       roles: profile.roles,
       firstName: profile.firstName,
       lastName: profile.lastName,
+      specialty: profile.specialty,
+      phone: profile.phone,
       clientHistory: profile.clientHistory,
       calendarAppointments: profile.calendarAppointments,
       clientAppointments: profile.clientAppointments,
@@ -20,6 +22,8 @@ var ProfileTransformer = Mystique.Transformer.extend({
     return {
       email: req.getJson('profile.email'),
       address: req.getJson('profile.address'),
+      specialty: req.getJson('profile.specialty'),
+      phone: req.getJson('profile.phone'),
       roles: req.getJson('profile.roles'),
       firstName: req.getJson('profile.firstName'),
       lastName: req.getJson('profile.lastName'),
