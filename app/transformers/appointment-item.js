@@ -11,6 +11,7 @@ var AppointmentItemTransformer = Mystique.Transformer.extend({
       length: appointmentItem.length,
       title: appointmentItem.title,
       client: appointmentItem.client,
+      professional: appointmentItem.professional,
     };
   },
 
@@ -21,6 +22,7 @@ var AppointmentItemTransformer = Mystique.Transformer.extend({
       startTime: req.getJson('appointmentItem.startTime'),
       length: req.getJson('appointmentItem.length'),
       title: req.getJson('appointmentItem.title'),
+      professional: req.getJson('appointmentItem.professional'),
     };
   },
 });
