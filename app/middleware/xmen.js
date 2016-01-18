@@ -87,7 +87,7 @@ module.exports = function(req, res, next) {
       var Model = Mongoose.model(modelName);
 
       Model.findById(id)
-        .populate([])
+        .populate(options.include)
         .exec((err, model) => {
           if (err) {
             return res.status(500).send(err);
