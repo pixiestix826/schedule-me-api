@@ -5,17 +5,18 @@ var api = {};
 
 // ALL
 api.appointmentItems = function(req) {
-  return req.store.recordCollection('AppointmentItem');
+  return req.store.recordCollection('AppointmentItem', {include: ['service']});
 };
 
 // GET
 api.appointmentItem = function(req) {
-  return req.store.recordItemById('AppointmentItem', req.params.id);
+  return req.store.recordItemById('AppointmentItem', req.params.id, {include: ['service']});
 };
 
 // POST
 api.addAppointmentItem = function(req) {
   return req.store.createRecord('AppointmentItem', {
+    include: ['service'],
     beforeSave(model, save) {
       model.client = req.user;
       save();
@@ -25,7 +26,7 @@ api.addAppointmentItem = function(req) {
 
 // PUT
 api.editAppointmentItem = function(req) {
-  return req.store.updateRecord('AppointmentItem', req.params.id);
+  return req.store.updateRecord('AppointmentItem', req.params.id, {include: ['service']});
 };
 
 // DELETE
