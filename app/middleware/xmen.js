@@ -137,7 +137,7 @@ module.exports = function(req, res, next) {
     destroyRecord(modelName, id) {
       var Model = Mongoose.model(modelName);
 
-      Model.findById({_id: id})
+      Model.findById(id)
         .exec((err, model) => {
           if (err) {
             return res.status(500).send(err);
