@@ -5,10 +5,10 @@ var AppointmentItemTransformer = Mystique.Transformer.extend({
   mapOut: function(appointmentItem) {
     return {
       id: appointmentItem.id,
-      service: appointmentItem.service,
+      service: appointmentItem.service ? appointmentItem.service.id : undefined,
       name: appointmentItem.name,
       startTime: appointmentItem.startTime,
-      length: appointmentItem.length || appointmentItem.service.length,
+      length: appointmentItem.service ? appointmentItem.service.time : appointmentItem.length,
       title: appointmentItem.title,
       client: appointmentItem.client,
       professional: appointmentItem.professional,

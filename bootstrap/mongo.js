@@ -1,3 +1,3 @@
 var mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/token-ideas');
+mongoose.connect('mongodb://heroku_h2g1fq8z:3njffqi0gu1fmfrg7pkr8sm6vg@ds045795.mongolab.com:45795/heroku_h2g1fq8z');
