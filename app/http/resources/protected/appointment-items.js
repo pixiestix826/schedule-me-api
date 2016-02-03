@@ -18,7 +18,9 @@ api.addAppointmentItem = function(req) {
   return req.store.createRecord('AppointmentItem', {
     include: ['service'],
     beforeSave(model, save) {
-      model.client = req.user;
+      if (model.service) {
+        model.client = req.user;
+      }
       save();
     },
   });
