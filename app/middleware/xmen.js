@@ -143,6 +143,10 @@ module.exports = function(req, res, next) {
             return res.status(500).send(err);
           }
 
+          if (!model) {
+            return res.status(404).send({message: `${modelName} with the id: ${id} not found`});
+          }
+
           model.remove(() => {
             res.status(204).send();
           });
