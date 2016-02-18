@@ -2,7 +2,7 @@ var Mystique = require('mystique');
 
 var AppointmentItemTransformer = Mystique.Transformer.extend({
   resourceName: 'appointmentItem',
-  mapOut: function(appointmentItem) {
+  mapOut: function (appointmentItem) {
     return {
       id: appointmentItem.id,
       service: appointmentItem.service ? appointmentItem.service.id : undefined,
